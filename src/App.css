@@ -1,6 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+
 body {
     background-color: #2F2F2F;
 }
 h1 {
     color: #D9D9D9;
+}
+
+.logo {
+    margin-left: 10px;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4B4B4B;
+    padding: 10px;
+    margin: 0;
+    }
+.nav-buttons {
+    margin-right: 10px;
+    }
+        
+.nav-buttons a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: Montserrat;
+    font-weight: 500;
+    word-wrap: break-word;
+    margin: 0 5px;
+}
+        
+.nav-buttons a.active {
+    background-color: white;
 }
