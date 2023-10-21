@@ -38,3 +38,21 @@ h1 {
 .nav-buttons a.active {
     background-color: white;
 }
+
+.csClubText {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78%;
+    margin-top: 225px;
+}
+.pageHeaders {
+    display:block;
+    margin-top:300px;
+    margin-left: 15px;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 70px;
+}
