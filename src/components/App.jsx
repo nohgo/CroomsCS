@@ -1,10 +1,8 @@
-import { useState } from "react";
 import "../App.css";
+import Nav from "./Nav.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <h1>yello</h1>;
+  return <Nav />;
 }
 
 export default App;
