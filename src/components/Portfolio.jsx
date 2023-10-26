@@ -4,7 +4,7 @@ import "../App.css/";
 function Portfolio() {
   return (
     <div className="pageHeaders">
-      <h1>Portfolio</h1>
+      <h1 id="Portfolio">Portfolio</h1>
     </div>
   );
 }
