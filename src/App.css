@@ -40,11 +40,11 @@ h1 {
 }
 
 .csClubText {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 78%;
-    margin-top: 20.833%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
 }
 .pageHeaders {
     display:block;
