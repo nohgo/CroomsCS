@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" height="120pt" width="160pt" viewBox="1025 87 168 126" ><defs><style type="text/css">
+            @font-face {
+                font-family: 'noto_regular';
+                src: url('https://app.creately.com/diagram/assets/fonts/noto/noto-regular.woff') format('woff'),
+                     url('https://app.creately.com/diagram/assets/fonts/noto/noto-regular.woff2') format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+        p {
+            margin: 0;
+        }
+        </style></defs><defs><style>
+            span{ display: inline-block; }
+        </style></defs><g id="l1sIcf8cdyW"><g transform="translate(1030 90)"><rect x="0" y="0" width="159.99999999999997" height="120.00000000000001" fill="white" stroke="#7e7e7e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(1110, 141) rotate(0, 0, 9)" width="0" height="18"><text text-decoration="none" x="0" fill="#4b4b4b" font-size="10pt" font-family="noto_regular"  y="15"></text></g></g><g id="bBWwt0haNFp"><g transform="translate(1040.053376737789 134.15773796005305)"><path d="M 0,69.38169576794894 L 100.57499640801973,69.38169576794894 L 50.287498204009864,0 L 0,69.38169576794894 Z" fill="rgb(180,180,180)" stroke="#7e7e7e"/></g></g><g id="98AuoZZimVr"><g transform="translate(1111.9201575496381 161.2773510984298)"><path d="M 0,42.49934221993865 L 57.471423822617965,42.49934221993865 L 28.735711911308982,0 L 0,42.49934221993865 Z" fill="rgb(180,180,180)" stroke="#7e7e7e"/></g></g><g id="I1oYy2TjZCG"><g transform="translate(1131.7404428634427 103.8446280367607)"><ellipse cx="19.546489266589195" cy="19.546489266589195" rx="19.546489266589195" ry="19.546489266589195" fill="rgb(180,180,180)" stroke="#7e7e7e"/></g></g></svg>
