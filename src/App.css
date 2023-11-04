@@ -9,7 +9,7 @@ h1 {
 }
 
 .logo {
-    margin-left: 10px;
+    margin-left: 0.5%;
     padding: 0;
 }
 
@@ -44,17 +44,17 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 90vh;
 }
 .pageHeaders {
     display:block;
-    margin-top:19vw;
+    margin-top:10vw;
     margin-left: 15px;
 }
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 1000;
-    font-size: 70px;
+    font-size: 100px;
 }
 
 .slideButton {
