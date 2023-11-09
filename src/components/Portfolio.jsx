@@ -6,22 +6,21 @@ function Portfolio() {
   const [count, setCount] = useState(1);
 
   return (
-    <>
+    <div className="page">
       <div className="pageHeaders">
         <h1 id="Portfolio">Portfolio</h1>
       </div>
       <div className="carasol">
-        <Button
-          isLeft={true}
-          onPress={() => count > 1 && setCount(count - 1)}
-        />
-        <Slides count={count} />
-        <Button
-          isLeft={false}
-          onPress={() => count < 2 && setCount(count + 1)}
-        />
+        <div className="slides">
+          <Button isLeft={true} onPress={() => setCount(count - 1)} />
+          <Slides count={count} />
+          <Button isLeft={false} onPress={() => setCount(count + 1)} />
+        </div>
+        <div className="main-text">
+          <Text count={count} />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -39,16 +38,20 @@ function Button({ isLeft, onPress }) {
     </button>
   );
 }
-
+//! MAKES THE SCREEN JUMP TO THE MIDDLE OF THE PAGE ?
 function Slides({ count }) {
+  const slides = ["src/assets/MIQyt1kde0t.svg", "src/assets/react.svg"];
+
+  return <img src={slides[(count + 1) % 2]} className="centerImage"></img>;
+}
+
+function Text({ count }) {
+  const headers = ["Hello", "How are you doing"];
+  const bodies = ["THIS IS EXAMPLE TEST", "THIS IS ALSO EXAMPLE TEXT"];
   return (
     <>
-      {count == 1 && (
-        <img src="src/assets/MIQyt1kde0t.svg" className="centerImage"></img>
-      )}
-      {count == 2 && (
-        <img src="src/assets/react.svg" className="centerImage"></img>
-      )}
+      <h1>{headers[(count + 1) % 2]}</h1>
+      <p>{bodies[(count + 1) % 2]}</p>
     </>
   );
 }
