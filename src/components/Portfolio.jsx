@@ -17,6 +17,8 @@ function Portfolio() {
           <Button isLeft={false} onPress={() => setCount(count + 1)} />
         </div>
         <div className="main-text">
+          <SlideDot isActive={Math.abs(count) % 2 == 1} />
+          <SlideDot isActive={Math.abs(count) % 2 == 0} />
           <Text count={count} />
         </div>
       </div>
@@ -42,7 +44,18 @@ function Button({ isLeft, onPress }) {
 function Slides({ count }) {
   const slides = ["src/assets/MIQyt1kde0t.svg", "src/assets/react.svg"];
 
-  return <img src={slides[(count + 1) % 2]} className="centerImage"></img>;
+  return (
+    <img src={slides[Math.abs(count + 1) % 2]} className="centerImage"></img>
+  );
+}
+
+function SlideDot({ isActive }) {
+  return (
+    <img
+      className="dots"
+      src={isActive ? "src/assets/activeDot.svg" : "src/assets/inactiveDot.svg"}
+    ></img>
+  );
 }
 
 function Text({ count }) {
@@ -50,8 +63,8 @@ function Text({ count }) {
   const bodies = ["THIS IS EXAMPLE TEST", "THIS IS ALSO EXAMPLE TEXT"];
   return (
     <>
-      <h1>{headers[(count + 1) % 2]}</h1>
-      <p>{bodies[(count + 1) % 2]}</p>
+      <h1>{headers[Math.abs(count + 1) % 2]}</h1>
+      <p>{bodies[Math.abs(count + 1) % 2]}</p>
     </>
   );
 }
