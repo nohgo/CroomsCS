@@ -28,16 +28,16 @@ function Portfolio() {
 
 function Button({ isLeft, onPress }) {
   return (
-    <button
+    <img
       onClick={onPress}
       className={
         isLeft
-          ? "slideButton text-center left"
-          : "slideButton text-center right"
+          ? "button left"
+          : "button right"
       }
+      src={isLeft ? "src/assets/left-arrow.svg" : "src/assets/right-arrow.svg"}
     >
-      {isLeft ? "<" : ">"}
-    </button>
+    </img>
   );
 }
 //! MAKES THE SCREEN JUMP TO THE MIDDLE OF THE PAGE ?

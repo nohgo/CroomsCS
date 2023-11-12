@@ -52,23 +52,16 @@ h1 {
     font-size: 15vh;
 }
 
-.slideButton {
-    width: 10vh;
-    height: 10vh;
-    background-color: #d9d9d9;
-    color: #cf2c2c;
-    border-radius: 5vh;
-    font-size: 20pt;
-    
-}
-
 .left {
     align-self: center;
-
+    width: 10vh;
+    height: 10vh;
 }
 
 .right {
     align-self: center;
+    width: 10vh;
+    height: 10vh;
 }
 .slides {
     justify-content: space-between;
@@ -108,3 +101,6 @@ h1 {
     margin-right: 0.1vw;
 }
 
+.button:hover {
+    filter: brightness(75%);
+}
