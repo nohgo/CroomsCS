@@ -42,7 +42,7 @@ function Button({ isLeft, onPress }) {
 }
 //! MAKES THE SCREEN JUMP TO THE MIDDLE OF THE PAGE ?
 function Slides({ count }) {
-  const slides = ["src/assets/MIQyt1kde0t.svg", "src/assets/react.svg"];
+  const slides = ["src/assets/image1.svg", "src/assets/image2.svg"];
 
   return (
     <img src={slides[Math.abs(count + 1) % 2]} className="centerImage"></img>
