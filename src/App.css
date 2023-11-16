@@ -114,6 +114,6 @@ h1 {
     margin-top: 20vh;
     height: 100vh;
     display: grid;
-    grid-template-rows: 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh;
-    grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
 }
