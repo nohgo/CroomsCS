@@ -52,17 +52,6 @@ h1 {
     font-size: 15vh;
 }
 
-.left {
-    align-self: center;
-    width: 10vh;
-    height: 10vh;
-}
-
-.right {
-    align-self: center;
-    width: 10vh;
-    height: 10vh;
-}
 .slides {
     justify-content: space-between;
     display: flex;
@@ -70,8 +59,8 @@ h1 {
 .centerImage {
     flex: 1;
     align-self: center;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .main-text {
     align-self: center;
@@ -103,10 +92,13 @@ h1 {
 
 .button {
     display: flex;
-    flex: 0.2;
+    flex: 0.1;
     align-self: center;
     margin-left: 8%;
-    margin-right: 8%
+    margin-right: 8%;
+    align-self: center;
+    width: 15vh;
+    height: 15vh;
 }
 
 .button:hover {
