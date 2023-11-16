@@ -107,3 +107,13 @@ h1 {
 .button:hover {
     filter: brightness(75%);
 }
+
+.roadmap {
+    background-image: url("assets/roadmap.svg");
+    background-size: cover;
+    margin-top: 20vh;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh;
+    grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
+}
