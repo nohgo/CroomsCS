@@ -3,7 +3,7 @@ import '../App.css/';
 
 function Roadmap() {
   return (
-    <div>Roadmap</div>
+    <div className="roadmap"></div>
   );
 }
 
