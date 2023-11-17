@@ -23,6 +23,8 @@ h1 {
     background: #4B4B4B;
     padding: 10px;
     margin: 0;
+    position: fixed;
+    width: 100vw;
     }
 
 .nav-buttons a {
@@ -111,21 +113,22 @@ h1 {
 .roadmap {
     background-image: url("assets/roadmap.svg");
     background-size: cover;
-    margin-top: 20vh;
+    margin-top: 5vh;
     height: 100vh;
-    display: grid;
-    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
-    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    position: relative;
 }
 .react-pin {
-    grid-column: 2;
-    grid-row: 2;
+    position: absolute;
+    top: 10%;
+    left: 7%;
 }
 .game-pin {
-    grid-column: 5;
-    grid-row: 2;
+    position: absolute;
+    top: 25%;
+    left: 40%;
 }
 .mongo-pin {
-    grid-column: 8;
-    grid-row: 4;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
 }
