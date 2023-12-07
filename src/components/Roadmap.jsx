@@ -3,7 +3,7 @@ import '../App.css/';
 
 function Roadmap() {
   return (
-    <div className="roadmap"></div>
+    <img className="timeline" src="src/assets/timeline.svg"></img>
   );
 }
 

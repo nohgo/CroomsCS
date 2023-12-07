@@ -117,3 +117,7 @@ h1 {
     grid-template-rows: 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh;
     grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
 }
+
+.timeline {
+    align-self: center;
+}
