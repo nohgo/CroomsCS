@@ -44,8 +44,7 @@ h1 {
     height: 90vh;
 }
 .pageHeaders {
-    display:block;
-    margin-top:0.5vh;
+    display: block;
     margin-left: 15px;
     text-shadow: 2px 2px #ff0000;
 }
@@ -79,7 +78,7 @@ h1 {
     font-weight: lighter;
 
 }
-.carasol {
+.carousel {
     flex-direction: column;
 }
 .page {
@@ -108,16 +107,39 @@ h1 {
     filter: brightness(75%);
 }
 
-.roadmap {
-    background-image: url("assets/roadmap.svg");
-    background-size: cover;
-    margin-top: 20vh;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh 14.27vh;
-    grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
+.timeline {
+    position: relative;
+    text-align: center;
+    margin-top: 40vh;
+    margin-bottom: 40vh;
 }
 
-.timeline {
-    align-self: center;
+.timeline img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
+}
+
+.react, .game, .fullstack {
+    color: #d9d9d9;
+    font-size: 4rem;
+}
+
+.react {
+    position: absolute;
+    left: 8.5vw;
+    bottom: 5vh;
+}
+
+.game {
+    position: absolute;
+    left: 45vw;
+    bottom: 5vh;
+}
+
+.fullstack {
+    position: absolute;
+    left: 80vw;
+    bottom: 5vh;
 }

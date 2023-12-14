@@ -8,9 +8,9 @@ function Portfolio() {
   return (
     <div className="page">
       <div className="pageHeaders">
-        <h1 id="Portfolio">Portfolio</h1>
+        <h1>Portfolio</h1>
       </div>
-      <div className="carasol">
+      <div className="carousel">
         <div className="slides">
           <Button isLeft={true} onPress={() => setCount(count - 1)} />
           <Slides count={count} />
