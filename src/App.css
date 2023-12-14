@@ -44,8 +44,7 @@ h1 {
     height: 90vh;
 }
 .pageHeaders {
-    display:block;
-    margin-top:0.5vh;
+    display: block;
     margin-left: 15px;
     text-shadow: 2px 2px #ff0000;
 }
@@ -79,14 +78,14 @@ h1 {
     font-weight: lighter;
 
 }
-.carasol {
+.carousel {
     flex-direction: column;
 }
 .page {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    margin-top: 5%;
+    margin-top: 5%
 }
 .dots {
     margin-left: 0.1vw;
@@ -108,24 +107,39 @@ h1 {
     filter: brightness(75%);
 }
 
-.roadmap {
-    background-image: url("assets/roadmap.svg");
-    background-size: cover;
-    margin-top: 20vh;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
-    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+.timeline {
+    position: relative;
+    text-align: center;
+    margin-top: 40vh;
+    margin-bottom: 40vh;
 }
-.react-pin {
-    grid-column: 2;
-    grid-row: 2;
+
+.timeline img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
 }
-.game-pin {
-    grid-column: 5;
-    grid-row: 2;
+
+.react, .game, .fullstack {
+    color: #d9d9d9;
+    font-size: 4rem;
 }
-.mongo-pin {
-    grid-column: 8;
-    grid-row: 4;
+
+.react {
+    position: absolute;
+    left: 8.5vw;
+    bottom: 5vh;
+}
+
+.game {
+    position: absolute;
+    left: 45vw;
+    bottom: 5vh;
+}
+
+.fullstack {
+    position: absolute;
+    left: 80vw;
+    bottom: 5vh;
 }
