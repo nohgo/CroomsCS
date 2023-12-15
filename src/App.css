@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: Montserrat;
 }
 h1 {
     color: #D9D9D9;
@@ -94,7 +95,7 @@ h1 {
 
 .button {
     display: flex;
-    flex: 0.1;
+    flex-shrink: 1;
     align-self: center;
     margin-left: 8%;
     margin-right: 8%;
@@ -110,36 +111,55 @@ h1 {
 .timeline {
     position: relative;
     text-align: center;
-    margin-top: 40vh;
-    margin-bottom: 40vh;
+    margin-top: 25vh;
+    padding-bottom: 50vh;
 }
 
 .timeline img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 12vh;
     width: 75vw;
 }
 
 .react, .game, .fullstack {
     color: #d9d9d9;
     font-size: 4rem;
+    top: 0vh;
 }
 
 .react {
     position: absolute;
-    left: 8.5vw;
-    bottom: 5vh;
+    left: 9vw;
+
 }
 
 .game {
     position: absolute;
-    left: 45vw;
-    bottom: 5vh;
+    left: 44vw;
 }
 
 .fullstack {
     position: absolute;
-    left: 80vw;
-    bottom: 5vh;
+    left: 75vw;
+}
+.react-sub, .game-sub, .fullstack-sub {
+    position: absolute;
+    list-style-type: disc;
+    color: #d9d9d9;
+    font-size: 1.5rem;
+    line-height: 6vh;
+    top: 16vh;
+    text-align:left;
+}
+
+.react-sub {
+    left: 5vw;
+}
+.game-sub {
+    left: 28vw;
+}
+.fullstack-sub {
+    left: 60vw;
 }
