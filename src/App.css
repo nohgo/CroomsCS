@@ -125,19 +125,19 @@ h1 {
 
 .react, .game, .fullstack {
     color: #d9d9d9;
-    font-size: 4rem;
+    font-size: 5vw;
     top: 0vh;
 }
 
 .react {
     position: absolute;
-    left: 9vw;
+    left: 8vw;
 
 }
 
 .game {
     position: absolute;
-    left: 44vw;
+    left: 43vw;
 }
 
 .fullstack {
@@ -148,7 +148,7 @@ h1 {
     position: absolute;
     list-style-type: disc;
     color: #d9d9d9;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     line-height: 6vh;
     top: 16vh;
     text-align:left;
