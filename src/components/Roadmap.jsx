@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css/";
 import { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 function Roadmap() {
   const [reactActive, setReact] = useState(false);
@@ -27,7 +28,7 @@ function Roadmap() {
   return (
     <>
       <div className="page">
-        <div className="pageHeaders roadmap">
+        <div id="Roadmap" className="pageHeaders roadmap">
           <h1>Roadmap</h1>
         </div>
         <div className="timeline">
@@ -73,15 +74,15 @@ function Roadmap() {
 
 function TimelineSubtext({ text, stage, elementState }) {
   return (
-    <>
-      {elementState && (
+    <CSSTransition in={elementState} timeout={500} classNames="subtext">
+      <>
         <ul className={stage}>
           {text.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
-      )}
-    </>
+      </>
+    </CSSTransition>
   );
 }
 

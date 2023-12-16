@@ -13,7 +13,7 @@ function Nav() {
 function NavButtons() {
   return (
     <div className="nav-buttons">
-      <a href="#Portfolio">Portfolio</a> <a href="#">Goals</a>{" "}
+      <a href="#Portfolio">Portfolio</a> <a href="#Roadmap">Roadmap</a>{" "}
       <a href="#">Contact</a>{" "}
     </div>
   );

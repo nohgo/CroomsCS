@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
-
+/*GENERAL STUFF =============================== */
+.pageHeaders {
+    display: block;
+    margin-left: 15px;
+    text-shadow: 2px 2px #ff0000;
+    width: auto;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 15vh;
+}
+.page {
+    display: block;
+    height: 90vh;
+    margin-top: 5vh
+}
 
 body {
     background-color: #2F2F2F;
@@ -12,6 +28,7 @@ h1 {
     color: #D9D9D9;
 }
 
+/*HOME PAGE ==============================*/
 .logo {
     margin-left: 0.5%;
     padding: 0;
@@ -44,17 +61,8 @@ h1 {
     align-items: center;
     height: 90vh;
 }
-.pageHeaders {
-    display: block;
-    margin-left: 15px;
-    text-shadow: 2px 2px #ff0000;
-}
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 1000;
-    font-size: 15vh;
-}
 
+/*PORTFOLIO ==========================*/
 .slides {
     justify-content: space-between;
     display: flex;
@@ -79,15 +87,7 @@ h1 {
     font-weight: lighter;
 
 }
-.carousel {
-    flex-direction: column;
-}
-.page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin-top: 5%
-}
+
 .dots {
     margin-left: 0.1vw;
     margin-right: 0.1vw;
@@ -108,18 +108,21 @@ h1 {
     filter: brightness(75%);
 }
 
+/*ROADMAP SECTION ===========================*/
 .timeline {
     position: relative;
     text-align: center;
-    margin-top: 25vh;
+    margin-top:30vh;
     padding-bottom: 50vh;
 }
-
+.roadmap {
+    margin-top: 30vh;
+}
 .timeline img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 12vh;
+    padding-top: 13vh;
     width: 75vw;
 }
 
@@ -131,7 +134,7 @@ h1 {
 
 .react {
     position: absolute;
-    left: 8vw;
+    left: 6vw;
 
 }
 
@@ -145,12 +148,13 @@ h1 {
     left: 75vw;
 }
 .react-sub, .game-sub, .fullstack-sub {
+    opacity:0;
     position: absolute;
     list-style-type: disc;
     color: #d9d9d9;
     font-size: 1.5vw;
     line-height: 6vh;
-    top: 16vh;
+    top: 19vh;
     text-align:left;
 }
 
@@ -158,8 +162,30 @@ h1 {
     left: 5vw;
 }
 .game-sub {
-    left: 28vw;
+    left: 31vw;
 }
 .fullstack-sub {
-    left: 60vw;
+    left: 65vw;
+}
+
+/*Transition stuff ================================*/
+.subtext-enter{
+    opacity: 0;
+}
+.subtext-enter-active{
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.subtext-enter-done {
+    opacity: 1;
+}
+.subtext-exit{
+    opacity: 1;
+}
+.subtext-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+}
+.subtext-exit-done {
+    opacity: 0;
 }

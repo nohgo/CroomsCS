@@ -7,20 +7,18 @@ function Portfolio() {
 
   return (
     <div className="page">
-      <div className="pageHeaders">
+      <div id="Portfolio" className="pageHeaders">
         <h1>Portfolio</h1>
       </div>
-      <div className="carousel">
-        <div className="slides">
-          <Button isLeft={true} onPress={() => setCount(count - 1)} />
-          <Slides count={count} />
-          <Button isLeft={false} onPress={() => setCount(count + 1)} />
-        </div>
-        <div className="main-text">
-          <SlideDot isActive={Math.abs(count) % 2 == 1} />
-          <SlideDot isActive={Math.abs(count) % 2 == 0} />
-          <Text count={count} />
-        </div>
+      <div className="slides">
+        <Button isLeft={true} onPress={() => setCount(count - 1)} />
+        <Slides count={count} />
+        <Button isLeft={false} onPress={() => setCount(count + 1)} />
+      </div>
+      <div className="main-text">
+        <SlideDot isActive={Math.abs(count) % 2 == 1} />
+        <SlideDot isActive={Math.abs(count) % 2 == 0} />
+        <Text count={count} />
       </div>
     </div>
   );
@@ -30,14 +28,9 @@ function Button({ isLeft, onPress }) {
   return (
     <img
       onClick={onPress}
-      className={
-        isLeft
-          ? "button left"
-          : "button right"
-      }
+      className={isLeft ? "button left" : "button right"}
       src={isLeft ? "src/assets/left-arrow.svg" : "src/assets/right-arrow.svg"}
-    >
-    </img>
+    ></img>
   );
 }
 //! MAKES THE SCREEN JUMP TO THE MIDDLE OF THE PAGE ?
