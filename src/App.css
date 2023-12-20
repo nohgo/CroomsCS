@@ -81,7 +81,8 @@ h1 {
     color: #D9D9D9;
     font-size: 3vh;
     font-weight: lighter;
-
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .dots {
@@ -109,9 +110,6 @@ h1 {
     position: relative;
     text-align: center;
     margin-top:30vh;
-}
-.roadmap {
-    margin-top: 15vh;
 }
 .timeline img {
     display: block;

@@ -52,8 +52,8 @@ function SlideDot({ isActive }) {
 }
 
 function Text({ count }) {
-  const headers = ["Hello", "How are you doing"];
-  const bodies = ["THIS IS EXAMPLE TEST", "THIS IS ALSO EXAMPLE TEXT"];
+  const headers = ["Portfolio", "TechFest"];
+  const bodies = ["Developed a simple portfolio website using React for front-end, Git for version control, and GitHub Pages to host the website", "Going to develop a website for the annual TechFest event using React for front-end, Node.js/Express.js for back-end, MongoDB for databases, and Git for version control"];
   return (
     <>
       <h1>{headers[Math.abs(count + 1) % 2]}</h1>
