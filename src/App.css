@@ -275,10 +275,10 @@ form button {
 
 .x {
     position: fixed;
-    right: 15%;
+    right: 14.5%;
     top: 16%;
     border: none;
-    background-color: #4f4f4f;
+    background-color: transparent;
 }
 
 /*Transition stuff ================================*/
