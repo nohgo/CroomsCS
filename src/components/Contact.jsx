@@ -36,21 +36,60 @@ function Contact() {
 function Questions() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
-    <div className="contactInfo">
-      <button
-        onClick={() => {
-          setIsPopupOpen(true);
-        }}
-      >
-        Have a Question?
-      </button>
+    <>
+      <div className="contactInfo">
+        <button
+          onClick={() => {
+            setIsPopupOpen(true);
+          }}
+        >
+          Have a Question?
+        </button>
+      </div>
       {isPopupOpen && <Popup />}
-    </div>
+    </>
   );
 }
 
+//! set the background to be like a grey rectangle with rounded corners
+// big x in the corner that closes the popup
+// text with emails and stuff
+// maybe a form to fill out with name, email, and question
 function Popup({ setIsPopupOpen }) {
-  return <div>Contact</div>;
+  return (
+    <>
+      <div className="blur"></div>
+      <div className="popup">
+        <h1>Contact us</h1>
+        <form action="https://formsubmit.co/nohgoering@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="Enter email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Message</label>
+            <textarea
+              name="message"
+              type="message"
+              rows="5"
+              class="form-control"
+              placeholder="Message"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </>
+  );
 }
 
 export default Contact;

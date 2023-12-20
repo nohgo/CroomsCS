@@ -211,6 +211,47 @@ h1 {
 .formLink {
     position: relative;
 }
+
+.popup {
+    z-index: 100000;
+    width:70vw;
+    height:70vh;
+    background: #4f4f4f;
+    position: fixed;
+    top: 15%;
+    left: 15%;
+     border-radius: 25px;
+}
+.blur {
+    position: fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.75);
+    z-index: 10000;
+  }
+  .popup h1 {
+    margin-top: 2%;
+    text-align: center;
+  }
+  form {
+    text-align: left;
+    margin: 0% 5% 5% 5%;
+  }
+  form label, form input, form textarea, form button {
+    color: #D9D9D9;
+  }
+  form div, form button{
+    margin-top: 2%;
+  }
+  form button {
+    text-decoration: none;
+    background-color: #2F2F2F;
+  }
+
 /*Transition stuff ================================*/
 .subtext-enter{
     opacity: 0;
