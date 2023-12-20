@@ -46,7 +46,7 @@ function Questions() {
           Have a Question?
         </button>
       </div>
-      {isPopupOpen && <Popup />}
+      {isPopupOpen && <Popup setIsPopupOpen={setIsPopupOpen} />}
     </>
   );
 }
@@ -61,6 +61,9 @@ function Popup({ setIsPopupOpen }) {
       <div className="blur"></div>
       <div className="popup">
         <h1>Contact us</h1>
+        <button onClick={() => {setIsPopupOpen(false)}} className="x">
+          <img src="src/assets/x.svg" />
+        </button>
         <form action="https://formsubmit.co/nohgoering@gmail.com" method="POST">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
