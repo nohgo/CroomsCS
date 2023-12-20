@@ -29,13 +29,13 @@ function Button({ isLeft, onPress }) {
     <img
       onClick={onPress}
       className={isLeft ? "button left" : "button right"}
-      src={isLeft ? "public/left-arrow.svg" : "public/right-arrow.svg"}
+      src={isLeft ? "src/assets/left-arrow.svg" : "src/assets/right-arrow.svg"}
     ></img>
   );
 }
 
 function Slides({ count }) {
-  const slides = ["public/image1.svg", "public/image2.svg"];
+  const slides = ["src/assets/image1.svg", "src/assets/image2.svg"];
 
   return (
     <img src={slides[Math.abs(count + 1) % 2]} className="centerImage"></img>
@@ -46,7 +46,7 @@ function SlideDot({ isActive }) {
   return (
     <img
       className="dots"
-      src={isActive ? "public/activeDot.svg" : "public/inactiveDot.svg"}
+      src={isActive ? "src/assets/activeDot.svg" : "src/assets/inactiveDot.svg"}
     ></img>
   );
 }
