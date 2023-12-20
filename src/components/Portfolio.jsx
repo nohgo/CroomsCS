@@ -29,13 +29,13 @@ function Button({ isLeft, onPress }) {
     <img
       onClick={onPress}
       className={isLeft ? "button left" : "button right"}
-      src={isLeft ? "./src/assets/left-arrow.svg" : "./src/assets/right-arrow.svg"}
+      src={isLeft ? "src/assets/left-arrow.svg" : "src/assets/right-arrow.svg"}
     ></img>
   );
 }
 
 function Slides({ count }) {
-  const slides = ["./src/assets/image1.svg", "./src/assets/image2.svg"];
+  const slides = ["src/assets/image1.svg", "src/assets/image2.svg"];
 
   return (
     <img src={slides[Math.abs(count + 1) % 2]} className="centerImage"></img>
@@ -46,14 +46,17 @@ function SlideDot({ isActive }) {
   return (
     <img
       className="dots"
-      src={isActive ? "./src/assets/activeDot.svg" : "./src/assets/inactiveDot.svg"}
+      src={isActive ? "src/assets/activeDot.svg" : "src/assets/inactiveDot.svg"}
     ></img>
   );
 }
 
 function Text({ count }) {
   const headers = ["Portfolio", "TechFest"];
-  const bodies = ["Developed a simple portfolio website using React for front-end, Git for version control, and GitHub Pages to host the website", "Going to develop a website for the annual TechFest event using React for front-end, Node.js/Express.js for back-end, MongoDB for databases, and Git for version control"];
+  const bodies = [
+    "Developed a simple portfolio website using React for front-end, Git for version control, and GitHub Pages to host the website",
+    "Going to develop a website for the annual TechFest event using React for front-end, Node.js/Express.js for back-end, MongoDB for databases, and Git for version control",
+  ];
   return (
     <>
       <h1>{headers[Math.abs(count + 1) % 2]}</h1>
