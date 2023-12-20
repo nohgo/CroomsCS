@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css/";
+import { timeline } from "../assets";
 import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
@@ -65,7 +66,7 @@ function Roadmap() {
             text={fullstackSub}
             stage="fullstack-sub"
           />
-          <img src="src/assets/timeline.svg"></img>
+          <img src={timeline} />
         </div>
       </div>
     </>

@@ -1,5 +1,13 @@
 import React from "react";
 import "../App.css/";
+import {
+  activeDot,
+  inactiveDot,
+  leftArrow,
+  rightArrow,
+  image1,
+  image2,
+} from "../assets";
 import { useState } from "react";
 
 function Portfolio() {
@@ -29,26 +37,19 @@ function Button({ isLeft, onPress }) {
     <img
       onClick={onPress}
       className={isLeft ? "button left" : "button right"}
-      src={isLeft ? "src/assets/left-arrow.svg" : "src/assets/right-arrow.svg"}
-    ></img>
+      src={isLeft ? leftArrow : rightArrow}
+    />
   );
 }
 
 function Slides({ count }) {
-  const slides = ["src/assets/image1.svg", "src/assets/image2.svg"];
+  const slides = [image1, image2];
 
-  return (
-    <img src={slides[Math.abs(count + 1) % 2]} className="centerImage"></img>
-  );
+  return <img src={slides[Math.abs(count + 1) % 2]} className="centerImage" />;
 }
 
 function SlideDot({ isActive }) {
-  return (
-    <img
-      className="dots"
-      src={isActive ? "src/assets/activeDot.svg" : "src/assets/inactiveDot.svg"}
-    ></img>
-  );
+  return <img className="dots" src={isActive ? activeDot : inactiveDot} />;
 }
 
 function Text({ count }) {
