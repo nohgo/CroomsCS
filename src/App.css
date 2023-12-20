@@ -68,6 +68,8 @@ h1 {
     align-self: center;
     margin-left: 3%;
     margin-right: 3%;
+    width: 50vw;
+    height: 50vh;
 }
 .main-text {
     align-self: center;
@@ -94,10 +96,10 @@ h1 {
     display: flex;
     flex-shrink: 1;
     align-self: center;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 4%;
+    margin-right: 4%;
     align-self: center;
-    width: 15vh;
+    width: 10vw;
     height: 15vh;
 }
 
