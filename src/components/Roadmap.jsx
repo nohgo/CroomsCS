@@ -65,7 +65,7 @@ function Roadmap() {
             text={fullstackSub}
             stage="fullstack-sub"
           />
-          <img src="./src/assets/timeline.svg"></img>
+          <img src="public/timeline.svg"></img>
         </div>
       </div>
     </>

@@ -16,13 +16,13 @@ function Contact() {
             in <span style={{ color: "red", fontWeight: "bold" }}>1-204</span>
           </h2>
           <div className="formImgs">
-            <img className="formLink" src="./src/assets/formLink.svg" />
+            <img className="formLink" src="public/formLink.svg" />
             <a
               href="https://www.google.com/url?q=https://forms.gle/DwibY5VxS4v2qSTW6&sa=D&source=editors&ust=1702928659336260&usg=AOvVaw1ZN0Mx45dXG2QdYj-cxDWJ"
               target="_blank"
             >
               <button className="openButton">
-                <img src="./src/assets/openButton.svg" />
+                <img src="public/openButton.svg" />
               </button>
             </a>
           </div>
@@ -61,8 +61,13 @@ function Popup({ setIsPopupOpen }) {
       <div className="blur"></div>
       <div className="popup">
         <h1>Contact us</h1>
-        <button onClick={() => {setIsPopupOpen(false)}} className="x">
-          <img src="./src/assets/x.svg" />
+        <button
+          onClick={() => {
+            setIsPopupOpen(false);
+          }}
+          className="x"
+        >
+          <img src="public/x.svg" />
         </button>
         <form action="https://formsubmit.co/nohgoering@gmail.com" method="POST">
           <div class="form-group">
