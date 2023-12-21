@@ -45,7 +45,12 @@ function Button({ isLeft, onPress }) {
 function Slides({ count }) {
   const slides = [image1, image2];
 
-  return <img src={slides[Math.abs(count + 1) % 2]} className="centerImage" />;
+  return (
+    <img
+      src={slides[Math.abs(count + 1) % slides.length]}
+      className="centerImage"
+    />
+  );
 }
 
 function SlideDot({ isActive }) {
