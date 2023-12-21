@@ -76,10 +76,7 @@ h1 {
   align-items: center;
 }
 .centerImage {
-  flex: 1;
   align-self: center;
-  margin-left: 3%;
-  margin-right: 3%;
   max-width: 45vw;
 }
 .main-text {
