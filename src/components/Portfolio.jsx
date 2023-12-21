@@ -16,10 +16,10 @@ function Portfolio() {
   return (
     //! I wantt to have space between the slides and the text but group buttons with slides
     <div className="page">
-      <h1 id="Portfolio" className="pageHeaders">
+      <h1 id="Portfolio" className="page-header">
         Portfolio
       </h1>
-      <div className="fullBody">
+      <div className="full-body">
         <div className="slides">
           <Button isLeft={true} onPress={() => setCount(count - 1)} />
           <Slides count={count} />
@@ -39,7 +39,7 @@ function Portfolio() {
 
 function Button({ isLeft, onPress }) {
   return (
-    <button onClick={onPress} className="arrows">
+    <button onClick={onPress} className="arrow">
       {" "}
       <img src={isLeft ? leftArrow : rightArrow} />
     </button>
@@ -52,7 +52,7 @@ function Slides({ count }) {
   return (
     <img
       src={slides[Math.abs(count + 1) % slides.length]}
-      className="centerImage"
+      className="center-image"
     />
   );
 }

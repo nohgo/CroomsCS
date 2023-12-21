@@ -2,7 +2,7 @@ import "../App.css/";
 
 function MainText() {
   return (
-    <div className="csClubText">
+    <div className="cs-club-text">
       <svg
         width="1114"
         height="286"

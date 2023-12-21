@@ -7,7 +7,7 @@ import { useState } from "react";
 function Contact() {
   return (
     <div className="page contact">
-      <h1 className="pageHeaders" id="Contact">
+      <h1 className="page-header" id="Contact">
         Contact
       </h1>
       <span>
@@ -16,13 +16,13 @@ function Contact() {
           <span style={{ color: "red", fontWeight: "bold" }}>Thursday</span> in{" "}
           <span style={{ color: "red", fontWeight: "bold" }}>1-204</span>
         </h2>
-        <div className="formImgs">
-          <img className="formLink" src={formLink} />
+        <div className="form-images">
+          <img className="form-link" src={formLink} />
           <a
             href="https://www.google.com/url?q=https://forms.gle/DwibY5VxS4v2qSTW6&sa=D&source=editors&ust=1702928659336260&usg=AOvVaw1ZN0Mx45dXG2QdYj-cxDWJ"
             target="_blank"
           >
-            <button className="openButton">
+            <button className="open-button">
               <img src={openButton} />
             </button>
           </a>
@@ -38,7 +38,7 @@ function Questions() {
   return (
     <>
       <button
-        className="questionButton"
+        className="question-button"
         onClick={() => {
           setIsPopupOpen(true);
         }}
@@ -69,28 +69,28 @@ function Popup({ setIsPopupOpen }) {
           <img src={x} />
         </button>
         <form action="https://formsubmit.co/nohgoering@gmail.com" method="POST">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+          <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Email address</label>
             <input
               name="email"
               type="email"
-              class="form-control"
+              className="form-control"
               placeholder="Enter email"
               required
             />
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Message</label>
+          <div className="form-group">
+            <label htmlFor="exampleInputPassword1">Message</label>
             <textarea
               name="message"
               type="message"
               rows="5"
-              class="form-control"
+              className="form-control"
               placeholder="Message"
               required
             />
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </form>
