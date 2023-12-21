@@ -1,18 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
-/*GENERAL STUFF =============================== */
-.pageHeaders {
-  margin-left: 5vh;
-  text-shadow: 2px 2px #ff0000;
-  width: auto;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 1000;
-  font-size: 8vw;
-}
-.page {
-  display: block;
-  min-height: 100vh;
+
+/*Mobile view*/
+@media screen and (max-width: 500px) {
+  body .page-header {
+    text-align: center;
+    margin-left: 0;
+    padding-top: 0.5rem;
+  }
+
+  body .center-image {
+    max-width: 75vw;
+  }
+
+  body .arrow {
+    width: 10vw;
+    height: 15vh;
+  }
+
+  body .main-text h1 {
+    font-size: 10vw;
+  }
+
+  body .main-text p {
+    font-size: 5vw;
+  }
+
+  /*TODO: make full-body centered vertically*/
 }
 
+/*General*/
 body {
   background-color: #2f2f2f;
   margin: 0;
@@ -20,17 +36,33 @@ body {
   overflow-x: hidden;
   font-family: Montserrat;
 }
+
 h1 {
   color: #d9d9d9;
 }
 
-/*HOME PAGE ==============================*/
+.page-header {
+  margin-left: 5vh;
+  text-shadow: 2px 2px #ff0000;
+  width: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 1000;
+  font-size: 8vw;
+}
+
+.page {
+  display: block;
+  min-height: 100vh;
+}
+
+/*Home page*/
 .logo {
   margin-left: 0.5%;
   padding: 0;
 }
 
 .navbar {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,42 +82,44 @@ h1 {
   margin: 0 1vw;
 }
 
-.csClubText {
+.cs-club-text {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90vh;
 }
 
-/*PORTFOLIO ==========================*/
-.fullBody {
+/*Portfolio*/
+.full-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.slidesAndDot {
-  display: flex;
-  flex-direction: column;
-}
+
 .dots {
   align-self: center;
 }
+
 .slides {
-  justify-content: space-evenly;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
 }
-.centerImage {
+
+.center-image {
   align-self: center;
   max-width: 45vw;
 }
+
 .main-text {
   align-self: center;
   text-align: center;
 }
+
 .main-text h1 {
   font-size: 5vw;
 }
+
 .main-text p {
   color: #d9d9d9;
   font-size: 1.5vw;
@@ -94,19 +128,19 @@ h1 {
   margin-right: 10vw;
 }
 
-.arrows {
+.arrow {
   align-self: center;
-  width: 10vw;
-  height: 15vh;
+  width: 6vw;
+  height: 9vh;
   background-color: transparent;
   border: none;
 }
 
-.arrows:hover {
+.arrow:hover {
   filter: brightness(75%);
 }
 
-/*ROADMAP SECTION ===========================*/
+/*Roadmap*/
 .timeline {
   display: flex;
   flex-direction: column;
@@ -119,21 +153,24 @@ h1 {
   margin-right: auto;
   width: 70vw;
 }
-.timelineSection {
+
+.timeline-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   align-items: flex-start;
 }
 
-.timelineDiv ul,
+.timeline-div ul,
 .time {
   margin-bottom: 0;
   padding-left: 0;
 }
-.timelineDiv {
+
+.timeline-div {
   width: 33.33%;
 }
+
 .react,
 .game,
 .fullstack {
@@ -154,8 +191,8 @@ h1 {
   list-style-position: inside;
 }
 
-/*CONTACT PAGE ======================================== */
-.contact {
+/*Contact page*/
+.information {
   flex-direction: column;
   display: flex;
   justify-content: space-between;
@@ -170,7 +207,12 @@ h1 {
   margin-right: 1%;
   float: right;
 }
-.questionButton {
+
+.info span {
+  white-space: nowrap;
+}
+
+.question-button {
   align-self: center;
   font-weight: bold;
   text-decoration: underline;
@@ -181,14 +223,14 @@ h1 {
   background-color: #2f2f2f;
 }
 
-.formImgs {
+.form-images {
   position: relative;
   margin-left: 4%;
   margin-top: 4%;
   display: inline-block;
 }
 
-.openButton {
+.open-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,7 +239,8 @@ h1 {
   width: auto;
   padding: 0;
 }
-.formLink {
+
+.form-link {
   position: relative;
   height: 50vh;
   width: 35vw;
@@ -213,6 +256,7 @@ h1 {
   left: 15%;
   border-radius: 25px;
 }
+
 .blur {
   position: fixed;
   padding: 0;
@@ -224,23 +268,28 @@ h1 {
   background: rgba(0, 0, 0, 0.75);
   z-index: 10000;
 }
+
 .popup h1 {
   margin-top: 2%;
   text-align: center;
 }
+
 form {
   margin: 0% 5% 5% 5%;
 }
+
 form label,
 form input,
 form textarea,
 form button {
   color: #d9d9d9;
 }
+
 form div,
 form button {
   margin-top: 2%;
 }
+
 form button {
   text-decoration: none;
 }
@@ -270,24 +319,29 @@ form button {
   background-color: transparent;
 }
 
-/*Transition stuff ================================*/
+/*Transition helpers*/
 .subtext-enter {
   opacity: 0;
 }
+
 .subtext-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
+
 .subtext-enter-done {
   opacity: 1;
 }
+
 .subtext-exit {
   opacity: 1;
 }
+
 .subtext-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-out;
 }
+
 .subtext-exit-done {
   opacity: 0;
 }

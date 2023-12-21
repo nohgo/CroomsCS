@@ -17,8 +17,8 @@ function Roadmap() {
 
   const gameSub = [
     "Continue to work with fundemental languages",
-    "Learn Node and expressJS",
-    "Integrate with react to create a full browser based game",
+    "Learn Node and ExpressJS",
+    "Integrate with React to create a full browser based game",
   ];
 
   const fullstackSub = [
@@ -29,11 +29,11 @@ function Roadmap() {
   return (
     <>
       <div className="page roadmap">
-        <h1 id="Roadmap" className="pageHeaders">
+        <h1 id="Roadmap" className="page-header">
           Roadmap
         </h1>
         <div className="timeline">
-          <div className="timelineSection">
+          <div className="timeline-section">
             <TimelineTitle
               onMouseEnter={() => setReact(true)}
               onMouseLeave={() => setReact(false)}
@@ -54,7 +54,7 @@ function Roadmap() {
             />
           </div>
           <img src={timeline} />
-          <div className="timelineSection">
+          <div className="timeline-section">
             <TimelineSubtext
               elementState={reactActive}
               text={reactSub}
@@ -79,7 +79,7 @@ function Roadmap() {
 
 function TimelineSubtext({ text, stage, elementState }) {
   return (
-    <div className="timelineDiv">
+    <div className="timeline-div">
       <CSSTransition in={elementState} timeout={500} classNames="subtext">
         <>
           <ul className={stage}>
@@ -95,7 +95,7 @@ function TimelineSubtext({ text, stage, elementState }) {
 
 function TimelineTitle({ text, stage, onMouseEnter, onMouseLeave }) {
   return (
-    <div className="timelineDiv">
+    <div className="timeline-div">
       <h2
         className={stage}
         onMouseEnter={onMouseEnter}
