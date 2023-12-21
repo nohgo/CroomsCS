@@ -28,45 +28,49 @@ function Roadmap() {
   ];
   return (
     <>
-      <div className="page">
+      <div className="page roadmap">
         <h1 id="Roadmap" className="pageHeaders">
           Roadmap
         </h1>
         <div className="timeline">
-          <TimelineTitle
-            onMouseEnter={() => setReact(true)}
-            onMouseLeave={() => setReact(false)}
-            text="React"
-            stage="react"
-          />
-          <TimelineSubtext
-            elementState={reactActive}
-            text={reactSub}
-            stage="react-sub"
-          />
-          <TimelineTitle
-            onMouseEnter={() => setGame(true)}
-            onMouseLeave={() => setGame(false)}
-            text="Game"
-            stage="game"
-          />
-          <TimelineSubtext
-            elementState={gameActive}
-            text={gameSub}
-            stage="game-sub"
-          />
-          <TimelineTitle
-            onMouseEnter={() => setFull(true)}
-            onMouseLeave={() => setFull(false)}
-            text="Fullstack"
-            stage="fullstack"
-          />
-          <TimelineSubtext
-            elementState={fullActive}
-            text={fullstackSub}
-            stage="fullstack-sub"
-          />
+          <div className="timelineSection">
+            <TimelineTitle
+              onMouseEnter={() => setReact(true)}
+              onMouseLeave={() => setReact(false)}
+              text="React"
+              stage="react"
+            />
+            <TimelineTitle
+              onMouseEnter={() => setGame(true)}
+              onMouseLeave={() => setGame(false)}
+              text="Game"
+              stage="game"
+            />
+            <TimelineTitle
+              onMouseEnter={() => setFull(true)}
+              onMouseLeave={() => setFull(false)}
+              text="Fullstack"
+              stage="fullstack"
+            />
+          </div>
           <img src={timeline} />
+          <div className="timelineSection">
+            <TimelineSubtext
+              elementState={reactActive}
+              text={reactSub}
+              stage="react-sub"
+            />
+            <TimelineSubtext
+              elementState={gameActive}
+              text={gameSub}
+              stage="game-sub"
+            />
+            <TimelineSubtext
+              elementState={fullActive}
+              text={fullstackSub}
+              stage="fullstack-sub"
+            />
+          </div>
         </div>
       </div>
     </>
@@ -75,27 +79,31 @@ function Roadmap() {
 
 function TimelineSubtext({ text, stage, elementState }) {
   return (
-    <CSSTransition in={elementState} timeout={500} classNames="subtext">
-      <>
-        <ul className={stage}>
-          {text.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </>
-    </CSSTransition>
+    <div className="timelineDiv">
+      <CSSTransition in={elementState} timeout={500} classNames="subtext">
+        <>
+          <ul className={stage}>
+            {text.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </>
+      </CSSTransition>
+    </div>
   );
 }
 
 function TimelineTitle({ text, stage, onMouseEnter, onMouseLeave }) {
   return (
-    <h2
-      className={stage}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    >
-      {text}
-    </h2>
+    <div className="timelineDiv">
+      <h2
+        className={stage}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
+        {text}
+      </h2>
+    </div>
   );
 }
 
