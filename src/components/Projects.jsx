@@ -10,14 +10,14 @@ import {
 } from "../assets";
 import { useState } from "react";
 
-function Portfolio() {
+function Projects() {
   const [count, setCount] = useState(1);
 
   return (
     //! I wantt to have space between the slides and the text but group buttons with slides
     <div className="page">
-      <h1 id="Portfolio" className="page-header">
-        Portfolio
+      <h1 id="Projects" className="page-header">
+        Projects
       </h1>
       <div className="full-body">
         <div className="slides">
@@ -75,4 +75,4 @@ function Text({ count }) {
   );
 }
 
-export default Portfolio;
+export default Projects;

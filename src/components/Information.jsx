@@ -4,11 +4,11 @@ import { x, openButton, formLink } from "../assets";
 
 import { useState } from "react";
 
-function Contact() {
+function Information() {
   return (
-    <div className="page contact">
-      <h1 className="page-header" id="Contact">
-        Contact
+    <div className="page information">
+      <h1 className="page-header" id="Information">
+        Information
       </h1>
       <span>
         <h2 className="info">
@@ -59,7 +59,7 @@ function Popup({ setIsPopupOpen }) {
     <>
       <div className="blur"></div>
       <div className="popup">
-        <h1>Contact us</h1>
+        <h1>Information us</h1>
         <button
           onClick={() => {
             setIsPopupOpen(false);
@@ -99,4 +99,4 @@ function Popup({ setIsPopupOpen }) {
   );
 }
 
-export default Contact;
+export default Information;

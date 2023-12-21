@@ -17,8 +17,8 @@ function Roadmap() {
 
   const gameSub = [
     "Continue to work with fundemental languages",
-    "Learn Node and expressJS",
-    "Integrate with react to create a full browser based game",
+    "Learn Node and ExpressJS",
+    "Integrate with React to create a full browser based game",
   ];
 
   const fullstackSub = [
