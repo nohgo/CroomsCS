@@ -28,9 +28,9 @@ function Roadmap() {
   return (
     <>
       <div className="page">
-        <div id="Roadmap" className="pageHeaders roadmap">
-          <h1>Roadmap</h1>
-        </div>
+        <h1 id="Roadmap" className="pageHeaders">
+          Roadmap
+        </h1>
         <div className="timeline">
           <TimelineTitle
             onMouseEnter={() => setReact(true)}
