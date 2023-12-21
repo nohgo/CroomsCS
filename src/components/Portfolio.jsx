@@ -15,22 +15,20 @@ function Portfolio() {
 
   return (
     //! I wantt to have space between the slides and the text but group buttons with slides
-    <div className="page portfolio">
+    <div className="page">
       <h1 id="Portfolio" className="pageHeaders">
         Portfolio
       </h1>
       <div className="fullBody">
-        <div className="slidesAndDot">
-          <div className="slides">
-            <Button isLeft={true} onPress={() => setCount(count - 1)} />
-            <Slides count={count} />
-            <Button isLeft={false} onPress={() => setCount(count + 1)} />
-          </div>
-          <span className="dots">
-            <SlideDot isActive={Math.abs(count) % 2 == 1} />
-            <SlideDot isActive={Math.abs(count) % 2 == 0} />
-          </span>
+        <div className="slides">
+          <Button isLeft={true} onPress={() => setCount(count - 1)} />
+          <Slides count={count} />
+          <Button isLeft={false} onPress={() => setCount(count + 1)} />
         </div>
+        <span className="dots">
+          <SlideDot isActive={Math.abs(count) % 2 == 1} />
+          <SlideDot isActive={Math.abs(count) % 2 == 0} />
+        </span>
         <div className="main-text">
           <Text count={count} />
         </div>

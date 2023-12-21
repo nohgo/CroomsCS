@@ -58,11 +58,6 @@ h1 {
 }
 
 /*PORTFOLIO ==========================*/
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .fullBody {
   display: flex;
   flex-direction: column;
@@ -76,7 +71,7 @@ h1 {
   align-self: center;
 }
 .slides {
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
   align-items: center;
 }
@@ -96,17 +91,13 @@ h1 {
 }
 .main-text p {
   color: #d9d9d9;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: lighter;
   margin-left: 10vw;
   margin-right: 10vw;
 }
 
 .arrows {
-  flex-shrink: 1;
-  align-self: center;
-  margin-left: 4%;
-  margin-right: 4%;
   align-self: center;
   width: 10vw;
   height: 15vh;
