@@ -14,19 +14,26 @@ function Portfolio() {
   const [count, setCount] = useState(1);
 
   return (
-    <div className="page">
+    //! I wantt to have space between the slides and the text but group buttons with slides
+    <div className="page portfolio">
       <h1 id="Portfolio" className="pageHeaders">
         Portfolio
       </h1>
-      <div className="slides">
-        <Button isLeft={true} onPress={() => setCount(count - 1)} />
-        <Slides count={count} />
-        <Button isLeft={false} onPress={() => setCount(count + 1)} />
-      </div>
-      <div className="main-text">
-        <SlideDot isActive={Math.abs(count) % 2 == 1} />
-        <SlideDot isActive={Math.abs(count) % 2 == 0} />
-        <Text count={count} />
+      <div className="fullBody">
+        <div className="slidesAndDot">
+          <div className="slides">
+            <Button isLeft={true} onPress={() => setCount(count - 1)} />
+            <Slides count={count} />
+            <Button isLeft={false} onPress={() => setCount(count + 1)} />
+          </div>
+          <span className="dots">
+            <SlideDot isActive={Math.abs(count) % 2 == 1} />
+            <SlideDot isActive={Math.abs(count) % 2 == 0} />
+          </span>
+        </div>
+        <div className="main-text">
+          <Text count={count} />
+        </div>
       </div>
     </div>
   );
@@ -34,11 +41,10 @@ function Portfolio() {
 
 function Button({ isLeft, onPress }) {
   return (
-    <img
-      onClick={onPress}
-      className={isLeft ? "button left" : "button right"}
-      src={isLeft ? leftArrow : rightArrow}
-    />
+    <button onClick={onPress} className="arrows">
+      {" "}
+      <img src={isLeft ? leftArrow : rightArrow} />
+    </button>
   );
 }
 
@@ -54,7 +60,7 @@ function Slides({ count }) {
 }
 
 function SlideDot({ isActive }) {
-  return <img className="dots" src={isActive ? activeDot : inactiveDot} />;
+  return <img src={isActive ? activeDot : inactiveDot} />;
 }
 
 function Text({ count }) {

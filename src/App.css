@@ -10,7 +10,7 @@
 }
 .page {
   display: block;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
@@ -58,17 +58,34 @@ h1 {
 }
 
 /*PORTFOLIO ==========================*/
-.slides {
-  justify-content: space-between;
+.portfolio {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fullBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slidesAndDot {
+  display: flex;
+  flex-direction: column;
+}
+.dots {
+  align-self: center;
+}
+.slides {
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .centerImage {
   flex: 1;
   align-self: center;
   margin-left: 3%;
   margin-right: 3%;
-  width: 50vw;
-  height: 50vh;
+  max-width: 45vw;
 }
 .main-text {
   align-self: center;
@@ -85,13 +102,7 @@ h1 {
   margin-right: 10vw;
 }
 
-.dots {
-  margin-left: 0.1vw;
-  margin-right: 0.1vw;
-}
-
-.button {
-  display: flex;
+.arrows {
   flex-shrink: 1;
   align-self: center;
   margin-left: 4%;
@@ -99,9 +110,11 @@ h1 {
   align-self: center;
   width: 10vw;
   height: 15vh;
+  background-color: transparent;
+  border: none;
 }
 
-.button:hover {
+.arrows:hover {
   filter: brightness(75%);
 }
 
