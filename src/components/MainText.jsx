@@ -1,4 +1,4 @@
-import "../App.Css/";
+import "../App.css/";
 
 function MainText() {
   return (
