@@ -15,9 +15,9 @@ function Portfolio() {
 
   return (
     <div className="page">
-      <div id="Portfolio" className="pageHeaders">
-        <h1>Portfolio</h1>
-      </div>
+      <h1 id="Portfolio" className="pageHeaders">
+        Portfolio
+      </h1>
       <div className="slides">
         <Button isLeft={true} onPress={() => setCount(count - 1)} />
         <Slides count={count} />

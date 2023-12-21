@@ -167,6 +167,11 @@ h1 {
   left: 65vw;
 }
 /*CONTACT PAGE ======================================== */
+.contact {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
 
 .info {
   color: #d9d9d9;
@@ -178,7 +183,7 @@ h1 {
   float: right;
 }
 .questionButton {
-  width: auto;
+  align-self: center;
   font-weight: bold;
   text-decoration: underline;
   font-size: 3vh;
