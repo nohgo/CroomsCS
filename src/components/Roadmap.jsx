@@ -6,7 +6,7 @@ import { CSSTransition } from "react-transition-group";
 
 function Roadmap() {
   const [reactActive, setReact] = useState(false);
-  const [gameActive, setGame] = useState(false);
+  const [backendActive, setBackend] = useState(false);
   const [fullActive, setFull] = useState(false);
 
   const reactSub = [
@@ -15,16 +15,16 @@ function Roadmap() {
     "Learn git for version control",
   ];
 
-  const gameSub = [
-    "Continue to work with fundemental languages",
+  const backendSub = [
+    "Continue to work on fundementals",
     "Learn Node and ExpressJS",
-    "Integrate with React to create a full browser based game",
+    "Integrate with React to make an app",
   ];
 
   const fullstackSub = [
-    "Learn MongoDB for database functionality",
+    "Learn MongoDB for databases",
     "Use MERN to create a fullstack web app",
-    "Deploy app using webhosting site",
+    "Deploy using webhosting site",
   ];
   return (
     <>
@@ -41,10 +41,10 @@ function Roadmap() {
               stage="react"
             />
             <TimelineTitle
-              onMouseEnter={() => setGame(true)}
-              onMouseLeave={() => setGame(false)}
-              text="Game"
-              stage="game"
+              onMouseEnter={() => setBackend(true)}
+              onMouseLeave={() => setBackend(false)}
+              text="Backend"
+              stage="backend"
             />
             <TimelineTitle
               onMouseEnter={() => setFull(true)}
@@ -61,9 +61,9 @@ function Roadmap() {
               stage="react-sub"
             />
             <TimelineSubtext
-              elementState={gameActive}
-              text={gameSub}
-              stage="game-sub"
+              elementState={backendActive}
+              text={backendSub}
+              stage="backend-sub"
             />
             <TimelineSubtext
               elementState={fullActive}

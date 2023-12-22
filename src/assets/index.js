@@ -8,6 +8,8 @@ import openButton from "./open-button.svg";
 import rightArrow from "./right-arrow.svg";
 import timeline from "./timeline.svg";
 import x from "./x.svg";
+import alt1 from "./image1-alt.svg";
+import alt2 from "./image2-alt.svg";
 
 export {
   activeDot,
@@ -20,4 +22,6 @@ export {
   rightArrow,
   timeline,
   x,
+  alt1,
+  alt2,
 };

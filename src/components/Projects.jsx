@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import "../App.css/";
 import {
   activeDot,
@@ -7,6 +8,8 @@ import {
   rightArrow,
   image1,
   image2,
+  alt1,
+  alt2,
 } from "../assets";
 import { useState } from "react";
 
@@ -47,7 +50,12 @@ function Button({ isLeft, onPress }) {
 }
 
 function Slides({ count }) {
-  const slides = [image1, image2];
+  const windowWidth = useRef(window.innerWidth);
+  let slides = [image1, image2];
+
+  if (windowWidth.current < 500) {
+    slides = [alt1, alt2];
+  }
 
   return (
     <img

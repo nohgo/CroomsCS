@@ -2,6 +2,13 @@
 
 /*Mobile view*/
 @media screen and (max-width: 500px) {
+  body .logo {
+    width: 20vw;
+  }
+  body .nav-buttons a {
+    font-size: 4vw;
+  }
+
   body .page-header {
     text-align: center;
     margin-left: 0;
@@ -13,8 +20,8 @@
   }
 
   body .arrow {
-    width: 10vw;
-    height: 15vh;
+    width: 15vw;
+    height: 5vh;
   }
 
   body .main-text h1 {
@@ -67,7 +74,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   background: #4b4b4b;
-  padding: 1vw;
+  padding-right: 1vw;
   margin: 0;
 }
 
@@ -172,7 +179,7 @@ h1 {
 }
 
 .react,
-.game,
+.backend,
 .fullstack {
   color: #d9d9d9;
   font-size: 5vw;
@@ -180,7 +187,7 @@ h1 {
 }
 
 .react-sub,
-.game-sub,
+.backend-sub,
 .fullstack-sub {
   margin-bottom: auto;
   opacity: 0;
