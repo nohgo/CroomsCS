@@ -5,20 +5,20 @@ import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 function Roadmap() {
-  const [reactActive, setReact] = useState(false);
+  const [frontendActive, setfrontend] = useState(false);
   const [backendActive, setBackend] = useState(false);
   const [fullActive, setFull] = useState(false);
 
-  const reactSub = [
+  const frontendSub = [
     "Learn HTML, CSS, JS",
-    "Use React to create portfolio",
+    "Use react to create portfolio",
     "Learn git for version control",
   ];
 
   const backendSub = [
     "Continue to work on fundementals",
     "Learn Node and ExpressJS",
-    "Integrate with React to make an app",
+    "Integrate with react to make an app",
   ];
 
   const fullstackSub = [
@@ -35,10 +35,10 @@ function Roadmap() {
         <div className="timeline">
           <div className="timeline-section">
             <TimelineTitle
-              onMouseEnter={() => setReact(true)}
-              onMouseLeave={() => setReact(false)}
-              text="React"
-              stage="react"
+              onMouseEnter={() => setfrontend(true)}
+              onMouseLeave={() => setfrontend(false)}
+              text="Frontend"
+              stage="frontend"
             />
             <TimelineTitle
               onMouseEnter={() => setBackend(true)}
@@ -56,9 +56,9 @@ function Roadmap() {
           <img src={timeline} />
           <div className="timeline-section">
             <TimelineSubtext
-              elementState={reactActive}
-              text={reactSub}
-              stage="react-sub"
+              elementState={frontendActive}
+              text={frontendSub}
+              stage="frontend-sub"
             />
             <TimelineSubtext
               elementState={backendActive}
