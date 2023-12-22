@@ -23,6 +23,8 @@
     padding-block: 0px;
   }
   body .arrow {
+    margin-left: 1vw;
+    margin-right: 1vw;
     width: 15vw;
     height: 5vh;
   }
