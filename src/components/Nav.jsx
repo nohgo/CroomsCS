@@ -3,10 +3,10 @@ import "../App.css";
 
 function Nav() {
   return (
-    <div className="navbar">
+    <span className="navbar">
       <Logo />
       <NavButtons />
-    </div>
+    </span>
   );
 }
 
