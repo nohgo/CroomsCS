@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
-* {
-  box-sizing: border-box;
-}
 /*Mobile view*/
 @media screen and (max-width: 500px) {
   body .logo {
@@ -21,6 +18,10 @@
     max-width: 75vw;
   }
 
+  body button {
+    padding-inline: 0px;
+    padding-block: 0px;
+  }
   body .arrow {
     width: 15vw;
     height: 5vh;
@@ -139,8 +140,8 @@ h1 {
 
 .arrow {
   align-self: center;
-  width: 6vw;
-  height: 9vh;
+  width: 8vw;
+  height: 5vh;
   background-color: transparent;
   border: none;
 }
@@ -180,7 +181,7 @@ h1 {
   width: 33.33%;
 }
 
-.react,
+.frontend,
 .backend,
 .fullstack {
   color: #d9d9d9;
@@ -188,7 +189,7 @@ h1 {
   text-align: center;
 }
 
-.react-sub,
+.frontend-sub,
 .backend-sub,
 .fullstack-sub {
   margin-bottom: auto;
