@@ -10,6 +10,7 @@ import timeline from "./timeline.svg";
 import x from "./x.svg";
 import alt1 from "./image1-alt.svg";
 import alt2 from "./image2-alt.svg";
+import timelineAlt from "./timeline-alt.svg";
 
 export {
   activeDot,
@@ -24,4 +25,5 @@ export {
   x,
   alt1,
   alt2,
+  timelineAlt,
 };

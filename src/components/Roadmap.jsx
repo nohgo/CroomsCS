@@ -1,10 +1,12 @@
 import React from "react";
 import "../App.css/";
-import { timeline } from "../assets";
+import { timeline, timelineAlt } from "../assets";
 import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
+import { useRef } from "react";
 
 function Roadmap() {
+  const windowWidth = useRef(window.innerWidth);
   const [frontendActive, setfrontend] = useState(false);
   const [backendActive, setBackend] = useState(false);
   const [fullActive, setFull] = useState(false);
@@ -23,7 +25,7 @@ function Roadmap() {
 
   const fullstackSub = [
     "Learn MongoDB for databases",
-    "Use MERN to create a fullstack web app",
+    "Use MERN to create a fullstack site",
     "Deploy using webhosting site",
   ];
   return (
@@ -53,7 +55,7 @@ function Roadmap() {
               stage="fullstack"
             />
           </div>
-          <img src={timeline} />
+          <img src={windowWidth.current > 500 ? timeline : timelineAlt} />
           <div className="timeline-section">
             <TimelineSubtext
               elementState={frontendActive}
