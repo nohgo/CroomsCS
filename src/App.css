@@ -38,6 +38,34 @@
     font-size: 5vw;
   }
 
+  body .timeline {
+    margin-top: 7vh;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  body .timeline-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60%;
+  }
+  body .timeline-div {
+    width: auto;
+  }
+  body .timeline img {
+    height: 70vh;
+    width: auto;
+    margin: 0;
+  }
+
+  body .frontend-sub,
+  body .backend-sub,
+  body .fullstack-sub {
+    text-align: left;
+    font-size: 3vw;
+    line-height: 4vh;
+  }
+
   /*TODO: make full-body centered vertically*/
 }
 
@@ -333,28 +361,28 @@ form button {
 }
 
 /*Transition helpers*/
-.subtext-enter {
+body .subtext-enter {
   opacity: 0;
 }
 
-.subtext-enter-active {
+body .subtext-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.subtext-enter-done {
+body .subtext-enter-done {
   opacity: 1;
 }
 
-.subtext-exit {
+body .subtext-exit {
   opacity: 1;
 }
 
-.subtext-exit-active {
+body .subtext-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-out;
 }
 
-.subtext-exit-done {
+body .subtext-exit-done {
   opacity: 0;
 }
