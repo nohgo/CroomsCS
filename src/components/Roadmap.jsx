@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../App.css/";
 import { timeline, timelineAlt } from "../assets";
 import { CSSTransition } from "react-transition-group";
 
-function Roadmap() {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  const handleResize = () => {
-    setWindowSize({ height: window.innerHeight, width: window.innerWidth });
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+function Roadmap({ windowSize }) {
   const [frontendActive, setfrontend] = useState(false);
   const [backendActive, setBackend] = useState(false);
   const [fullActive, setFull] = useState(false);

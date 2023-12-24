@@ -11,6 +11,7 @@ import x from "./x.svg";
 import alt1 from "./image1-alt.svg";
 import alt2 from "./image2-alt.svg";
 import timelineAlt from "./timeline-alt.svg";
+import formLinkAlt from "./form-link-alt.svg";
 
 export {
   activeDot,
@@ -26,4 +27,5 @@ export {
   alt1,
   alt2,
   timelineAlt,
+  formLinkAlt,
 };

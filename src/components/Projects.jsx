@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../App.css/";
 import {
   activeDot,
@@ -11,7 +11,7 @@ import {
   alt2,
 } from "../assets";
 
-function Projects() {
+function Projects({ windowSize }) {
   const [count, setCount] = useState(1);
 
   return (
@@ -22,7 +22,7 @@ function Projects() {
       <div className="full-body">
         <div className="slides">
           <Button isLeft={true} onPress={() => setCount(count - 1)} />
-          <Slides count={count} />
+          <Slides count={count} windowSize={windowSize} />
           <Button isLeft={false} onPress={() => setCount(count + 1)} />
         </div>
         <span className="dots">
@@ -46,24 +46,7 @@ function Button({ isLeft, onPress }) {
   );
 }
 
-function Slides({ count }) {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  const handleResize = () => {
-    setWindowSize({ height: window.innerHeight, width: window.innerWidth });
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+function Slides({ count, windowSize }) {
   let slides = [image1, image2];
   let slidesAlt = [alt1, alt2];
 
