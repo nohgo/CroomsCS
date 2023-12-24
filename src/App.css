@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 /*Mobile view*/
-@media screen and (max-width: 500px) {
+@media screen and (orientation: portrait) {
   body .logo {
     width: 20vw;
   }
+
   body .nav-buttons a {
     font-size: 4vw;
   }
@@ -15,6 +16,10 @@
     font-size: 15vw;
   }
 
+  body .full-body {
+    margin-top: 6vh;
+  }
+
   body .center-image {
     max-width: 70vw;
   }
@@ -23,6 +28,7 @@
     padding-inline: 0px;
     padding-block: 0px;
   }
+
   body .arrow {
     margin-left: 3vw;
     margin-right: 3vw;
@@ -43,15 +49,18 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
   body .timeline-section {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     max-width: 60%;
   }
+
   body .timeline-div {
     width: auto;
   }
+
   body .timeline img {
     height: 70vh;
     width: auto;
@@ -66,6 +75,38 @@
     line-height: 4vh;
   }
 
+  body .form-link {
+    position: relative;
+    min-width: 75vw;
+    max-height: 50vh;
+  }
+
+  body span .form-images {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  body .info-items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  body span .info {
+    padding: 0 5% 0 5%;
+    margin-right: 0;
+    margin-bottom: 0;
+    font-size: 10vw;
+    text-align: center;
+    width: 100%;
+  }
+
+  body form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
   /*TODO: make full-body centered vertically*/
 }
 
@@ -354,7 +395,7 @@ form button {
 
 .x {
   position: fixed;
-  right: 14.5%;
+  right: 15.5%;
   top: 16%;
   border: none;
   background-color: transparent;

@@ -1,23 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css/";
-import { x, openButton, formLink } from "../assets";
+import { x, openButton, formLink, formLinkAlt } from "../assets";
 
-import { useState } from "react";
-
-function Information() {
+function Information({ windowSize }) {
   return (
     <div className="page information">
       <h1 className="page-header" id="Information">
         Information
       </h1>
-      <span>
+      <span className="info-items">
         <h2 className="info">
           Meetings every{" "}
           <span style={{ color: "red", fontWeight: "bold" }}>Thursday</span> in{" "}
           <span style={{ color: "red", fontWeight: "bold" }}>1-204</span>
         </h2>
         <div className="form-images">
-          <img className="form-link" src={formLink} />
+          <img
+            className="form-link"
+            src={windowSize.width > windowSize.height ? formLink : formLinkAlt}
+          />
           <a
             href="https://www.google.com/url?q=https://forms.gle/DwibY5VxS4v2qSTW6&sa=D&source=editors&ust=1702928659336260&usg=AOvVaw1ZN0Mx45dXG2QdYj-cxDWJ"
             target="_blank"
@@ -50,16 +51,12 @@ function Questions() {
   );
 }
 
-//! set the background to be like a grey rectangle with rounded corners
-// big x in the corner that closes the popup
-// text with emails and stuff
-// maybe a form to fill out with name, email, and question
 function Popup({ setIsPopupOpen }) {
   return (
     <>
       <div className="blur"></div>
       <div className="popup">
-        <h1>Information us</h1>
+        <h1>Contact us</h1>
         <button
           onClick={() => {
             setIsPopupOpen(false);
@@ -84,7 +81,7 @@ function Popup({ setIsPopupOpen }) {
             <textarea
               name="message"
               type="message"
-              rows="5"
+              rows="9"
               className="form-control"
               placeholder="Message"
               required
