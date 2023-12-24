@@ -1,5 +1,4 @@
-import React from "react";
-import { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../App.css/";
 import {
   activeDot,
@@ -11,13 +10,11 @@ import {
   alt1,
   alt2,
 } from "../assets";
-import { useState } from "react";
 
 function Projects() {
   const [count, setCount] = useState(1);
 
   return (
-    //! I wantt to have space between the slides and the text but group buttons with slides
     <div className="page">
       <h1 id="Projects" className="page-header">
         Projects
@@ -50,16 +47,33 @@ function Button({ isLeft, onPress }) {
 }
 
 function Slides({ count }) {
-  const windowWidth = useRef(window.innerWidth);
-  let slides = [image1, image2];
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
-  if (windowWidth.current < 500) {
-    slides = [alt1, alt2];
-  }
+  const handleResize = () => {
+    setWindowSize({ height: window.innerHeight, width: window.innerWidth });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  let slides = [image1, image2];
+  let slidesAlt = [alt1, alt2];
 
   return (
     <img
-      src={slides[Math.abs(count + 1) % slides.length]}
+      src={
+        windowSize.width > windowSize.height
+          ? slides[Math.abs(count + 1) % slides.length]
+          : slidesAlt[Math.abs(count + 1) % slides.length]
+      }
       className="center-image"
     />
   );

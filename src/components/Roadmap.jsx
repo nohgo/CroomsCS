@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css/";
 import { timeline, timelineAlt } from "../assets";
-import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import { useRef } from "react";
 
 function Roadmap() {
-  const windowWidth = useRef(window.innerWidth);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  const handleResize = () => {
+    setWindowSize({ height: window.innerHeight, width: window.innerWidth });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const [frontendActive, setfrontend] = useState(false);
   const [backendActive, setBackend] = useState(false);
   const [fullActive, setFull] = useState(false);
@@ -55,7 +68,9 @@ function Roadmap() {
               stage="fullstack"
             />
           </div>
-          <img src={windowWidth.current > 500 ? timeline : timelineAlt} />
+          <img
+            src={windowSize.width > windowSize.height ? timeline : timelineAlt}
+          />
           <div className="timeline-section">
             <TimelineSubtext
               elementState={frontendActive}

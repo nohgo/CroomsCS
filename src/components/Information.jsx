@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css/";
 import { x, openButton, formLink } from "../assets";
-
-import { useState } from "react";
 
 function Information() {
   return (
@@ -50,10 +48,6 @@ function Questions() {
   );
 }
 
-//! set the background to be like a grey rectangle with rounded corners
-// big x in the corner that closes the popup
-// text with emails and stuff
-// maybe a form to fill out with name, email, and question
 function Popup({ setIsPopupOpen }) {
   return (
     <>
