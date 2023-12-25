@@ -81,7 +81,7 @@ function Popup({ setIsPopupOpen }) {
             <textarea
               name="message"
               type="message"
-              rows="9"
+              rows="5"
               className="form-control"
               placeholder="Message"
               required
